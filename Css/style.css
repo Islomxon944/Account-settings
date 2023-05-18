@@ -19,7 +19,7 @@ body{
     font-family:"Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #fff;
+    background-color: #222;
     color: #222;
 }
 
@@ -44,24 +44,102 @@ img{
 /* MAIN-CONTENT */
 .main-content{
     flex-grow: 1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
 }
 
-.box{
-    height: 757px;
-    background-color: lightcyan;
-    color: #fff;
+
+.profile-settings {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#ebcd26;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-settings-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 120px;
-    font-weight: bold;
+    padding: 40px;
+}
+.profile-settings-heading {
+    margin: 0;
+    font-size: 20px;
+}
+.profile-settings-close-link {
+    display: flex;
+    width: 25px;
+    height: 25px;
+}
+.profile-settings-form-body {
+    position: relative;
+    left: 40px;
+    padding: 40px 25px;
+    background-color: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+.profile-settings-user-img {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-settings-form-row{
+    display: flex;
+}
+
+
+.profile-settings-form-row .profile-settings-form-group{
+    margin-bottom: 0;
+    width: 50%;
+} 
+
+.profile-settings-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.profile-settings-form-group:not(:last-child){
+    margin-bottom: 24px;
+}
+.profile-settings-form-label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #777;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    background-image: linear-gradient(
-        to right bottom,
-        yellow,
-        black
-    );
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    font-weight: bold;
+}
+.profile-settings-form-field {
+    display: block;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 0;
+    border-bottom: 1px solid #666;
+}
+.profile-settings-form-field-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.profile-settings-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px;
+}
+.profile-settings-form-action {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.profile-settings-form-action:not(:last-child){
+    margin-right: 40px;
 }
